@@ -13,7 +13,7 @@ sns.set_style("ticks")
 
 # Fonts:
 rc('font',**{'family':'sans-serif','sans-serif':['Arial']})
-matplotlib.rcParams.update({'font.size':11})
+matplotlib.rcParams.update({'font.size':12})
 plt.rc('legend', **{'fontsize':7})
 
 # Ticks to the outside:
@@ -90,7 +90,7 @@ Teq = Teq[idx]
 scatter_kwargs = {"zorder":100}
 error_kwargs = {"zorder":0}
 
-fig = plt.figure(figsize=(10, 6))
+fig = plt.figure(figsize=(9, 7))
 ax = fig.add_subplot(111)
 plt.errorbar(M,R,xerr=Merr,yerr=Rerr,fmt='o',markersize=1,elinewidth=1,color='grey',**error_kwargs)
 plt.scatter(M,R,c=Teq,edgecolor='grey',cmap=cm.plasma,**scatter_kwargs)
