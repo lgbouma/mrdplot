@@ -12,7 +12,14 @@ sns.set_context("talk")
 sns.set_style("ticks")
 
 # Fonts:
-rc('font',**{'family':'sans-serif','sans-serif':['Arial']})
+# Arial font (pretty, not latex-like)
+#rc('font',**{'family':'sans-serif','sans-serif':['Arial']})
+# Latex fonts, quick:
+#matplotlib.rcParams['mathtext.fontset'] = 'stix'
+#matplotlib.rcParams['font.family'] = 'STIXGeneral'
+# Latex fonts, slow (but accurate):
+rc('font', **{'family': 'serif', 'serif': ['Computer Modern']})
+rc('text', usetex=True)
 matplotlib.rcParams.update({'font.size':12})
 plt.rc('legend', **{'fontsize':7})
 
